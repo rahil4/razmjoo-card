@@ -4,169 +4,57 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>راهیل رزم‌جو | امور ثبتی و نقشه‌برداری</title>
-
   <link rel="icon" href="logo.png" type="image/png">
-
-  <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta8PUb6gyPy4HN3oVD+KDcXXmfuygkmXESgsYijwAXFtRA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: "Vazir", "Tahoma", sans-serif;
-      background: #ffffff;
-      color: #1e293b;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
+      font-family: "Vazir", Tahoma, sans-serif;
+      margin: 0; padding: 0;
+      background: #fff; color: #1e293b;
+      min-height: 100vh;
+      display: flex; flex-direction: column; align-items: center;
       padding: 24px;
     }
-
-    .header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 24px;
-    }
-
-    .header img {
-      width: 150px;
-      margin: 12px 0;
-    }
-
-    .header h1 { /* Changed from h2 for semantic correctness */
-      color: #1e3a8a;
-      margin-bottom: 8px;
-    }
-
-    .header p {
-      color: #374151;
-      font-size: 15px;
-      margin-bottom: 24px;
-      text-align: center; /* Added for better text flow on smaller screens */
-    }
-
-    .services {
-      margin-top: 24px;
-      margin-bottom: 24px; /* Added margin for spacing */
+    .header, .services, .contact-links, footer {
+      width: 100%; max-width: 400px; margin: 0 auto;
       text-align: center;
-      width: 100%; /* Ensure it takes full width for centering */
     }
-
-    .services h3 {
-      color: #1e3a8a;
-      margin-bottom: 16px;
-    }
-
-    .services ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      align-items: center;
-    }
-
+    .header img { width: 120px; margin: 16px 0 8px; }
+    .header h1 { color: #1e3a8a; margin: 0 0 8px; font-size: 24px; }
+    .header p { color: #374151; font-size: 15px; margin-bottom: 16px;}
+    .services { margin: 24px 0; }
+    .services h3 { color: #1e3a8a; margin-bottom: 12px; font-size: 18px; }
+    .services ul { list-style: none; padding: 0; margin: 0; }
     .services li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: #374151;
-      font-size: 16px;
-      text-align: right; /* Align text to the right for RTL */
-      width: fit-content; /* Ensure the list item doesn't stretch */
+      display: flex; align-items: center; gap: 8px;
+      color: #374151; font-size: 15px; justify-content: flex-end;
+      margin-bottom: 6px;
     }
-
-    .services li i {
-      color: #1d4ed8;
-      font-size: 18px; /* Slightly larger icons */
-    }
-
-    .contact-links {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      align-items: center;
-      width: 100%; /* Ensure it takes full width for centering */
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end; /* Align items to the right for RTL */
-      gap: 10px;
-      width: 100%; /* Take full width to center the link */
-    }
-
-    .contact-item i {
-      font-size: 20px;
-      color: #1e293b;
-    }
-
+    .services li i { color: #1d4ed8; font-size: 17px; }
+    .contact-links { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;}
+    .contact-item { display: flex; align-items: center; justify-content: flex-end; gap: 8px;}
+    .contact-item i { font-size: 17px; color: #1e293b;}
     .contact-item a {
-      text-decoration: none;
-      background: #f1f5f9;
-      color: #1e293b;
-      padding: 12px 24px;
-      border: 1px solid #cbd5e1;
-      border-radius: 10px;
-      font-weight: 500;
-      text-align: center;
-      transition: all 0.3s;
-      width: 60vw; /* Adjust width to be more responsive */
-      max-width: 300px; /* Max width for larger screens */
+      flex: 1;
+      text-decoration: none; background: #f1f5f9;
+      color: #1e293b; padding: 10px 0;
+      border: 1px solid #cbd5e1; border-radius: 8px;
+      font-weight: 500; transition: .2s;
+      font-size: 15px; display: block;
     }
-
-    .contact-item a:hover {
-      background: #dbeafe;
-      color: #1d4ed8;
-      border-color: #93c5fd;
-    }
-
+    .contact-item a:hover { background: #dbeafe; color: #1d4ed8; border-color: #93c5fd;}
     .call-to-action {
-        margin-top: 24px;
-        color: #1e3a8a;
-        font-weight: bold;
-        font-size: 18px;
-        text-align: center;
+      color: #1e3a8a; font-weight: bold;
+      font-size: 16px; margin: 20px 0 0;
     }
-
     footer {
-      font-size: 12px;
-      color: #9ca3af;
-      padding: 16px 0;
-      text-align: center;
-      width: 100%;
+      font-size: 12px; color: #9ca3af; padding: 12px 0 0;
     }
-
-    /* Responsive adjustments */
     @media (max-width: 600px) {
-      body {
-        padding: 16px;
-      }
-      .header img {
-        width: 120px;
-      }
-      .header h1 {
-        font-size: 22px;
-      }
-      .header p {
-        font-size: 14px;
-      }
-      .contact-item a {
-        width: 80vw; /* Wider on smaller screens */
-        padding: 10px 20px;
-      }
-      .services li {
-        font-size: 15px;
-      }
+      body, .header, .services, .contact-links, footer { padding: 6vw; }
+      .header img { width: 90px;}
+      .header h1 { font-size: 20px;}
     }
   </style>
 </head>
@@ -181,9 +69,9 @@
   <div class="services">
     <h3>خدمات ما</h3>
     <ul>
-        <li><i class="fas fa-map-marked-alt"></i> نقشه‌برداری املاک و اراضی</li>
-        <li><i class="fas fa-file-invoice"></i> امور ثبتی و سند مالکیت</li>
-        <li><i class="fas fa-search-location"></i> تعیین حدود و موقعیت</li>
+      <li><i class="fas fa-map-marked-alt"></i> نقشه‌برداری املاک و اراضی</li>
+      <li><i class="fas fa-file-invoice"></i> امور ثبتی و سند مالکیت</li>
+      <li><i class="fas fa-search-location"></i> تعیین حدود و موقعیت</li>
     </ul>
   </div>
 
@@ -217,6 +105,5 @@
   <p class="call-to-action">برای مشاوره و هماهنگی با ما تماس بگیرید!</p>
 
   <footer>© خدمات نقشه‌برداری و ثبتی رزمجو</footer>
-
 </body>
 </html>
