@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -6,13 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>راهیل رزم‌جو | امور ثبتی و نقشه‌برداری</title>
 
-  <!-- Favicon -->
   <link rel="icon" href="logo.png" type="image/png">
 
-  <!-- Font -->
   <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" />
 
-  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papNXa9G5iV3PzD3pjONiE9FDpWRzJ9CwTcKcu2sJ/BtpTHT6KzKcvZPzzPKOr+nUWDfW6vwV2H1l3gRrQKZxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
@@ -45,7 +41,7 @@
       margin: 12px 0;
     }
 
-    .header h2 {
+    .header h1 { /* Changed from h2 for semantic correctness */
       color: #1e3a8a;
       margin-bottom: 8px;
     }
@@ -54,6 +50,43 @@
       color: #374151;
       font-size: 15px;
       margin-bottom: 24px;
+      text-align: center; /* Added for better text flow on smaller screens */
+    }
+
+    .services {
+      margin-top: 24px;
+      margin-bottom: 24px; /* Added margin for spacing */
+      text-align: center;
+      width: 100%; /* Ensure it takes full width for centering */
+    }
+
+    .services h3 {
+      color: #1e3a8a;
+      margin-bottom: 16px;
+    }
+
+    .services ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .services li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #374151;
+      font-size: 16px;
+      text-align: right; /* Align text to the right for RTL */
+      width: fit-content; /* Ensure the list item doesn't stretch */
+    }
+
+    .services li i {
+      color: #1d4ed8;
+      font-size: 18px; /* Slightly larger icons */
     }
 
     .contact-links {
@@ -61,13 +94,15 @@
       flex-direction: column;
       gap: 12px;
       align-items: center;
+      width: 100%; /* Ensure it takes full width for centering */
     }
 
     .contact-item {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: flex-end; /* Align items to the right for RTL */
       gap: 10px;
+      width: 100%; /* Take full width to center the link */
     }
 
     .contact-item i {
@@ -85,13 +120,22 @@
       font-weight: 500;
       text-align: center;
       transition: all 0.3s;
-      width: 60vw;
+      width: 60vw; /* Adjust width to be more responsive */
+      max-width: 300px; /* Max width for larger screens */
     }
 
     .contact-item a:hover {
       background: #dbeafe;
       color: #1d4ed8;
       border-color: #93c5fd;
+    }
+
+    .call-to-action {
+        margin-top: 24px;
+        color: #1e3a8a;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
     }
 
     footer {
@@ -101,14 +145,46 @@
       text-align: center;
       width: 100%;
     }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      body {
+        padding: 16px;
+      }
+      .header img {
+        width: 120px;
+      }
+      .header h1 {
+        font-size: 22px;
+      }
+      .header p {
+        font-size: 14px;
+      }
+      .contact-item a {
+        width: 80vw; /* Wider on smaller screens */
+        padding: 10px 20px;
+      }
+      .services li {
+        font-size: 15px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <div class="header">
     <img src="logo.png" alt="لوگوی رزم‌جو" />
-    <h2>راهیل رزم‌جو</h2>
-    <p>متخصص امور ثبتی و نقشه‌برداری</p>
+    <h1>راهیل رزم‌جو</h1>
+    <p>متخصص و مشاور در امور ثبتی و نقشه‌برداری با سال‌ها تجربه</p>
+  </div>
+
+  <div class="services">
+    <h3>خدمات ما</h3>
+    <ul>
+        <li><i class="fas fa-map-marked-alt"></i> نقشه‌برداری املاک و اراضی</li>
+        <li><i class="fas fa-file-invoice"></i> امور ثبتی و سند مالکیت</li>
+        <li><i class="fas fa-search-location"></i> تعیین حدود و موقعیت</li>
+    </ul>
   </div>
 
   <div class="contact-links">
@@ -134,11 +210,13 @@
     </div>
     <div class="contact-item">
       <i class="fas fa-map-marker-alt"></i>
-      <a href="geo:35.483172,51.078791(دفتر%20رزمجو)" target="_blank">موقعیت مکانی دفتر</a>
+      <a href="geo:35.483172,51.078791?q=دفتر%20رزمجو" target="_blank">موقعیت مکانی دفتر</a>
     </div>
   </div>
 
-  <footer>© Razmjoo Mapping & Legal Services</footer>
+  <p class="call-to-action">برای مشاوره و هماهنگی با ما تماس بگیرید!</p>
+
+  <footer>© خدمات نقشه‌برداری و ثبتی رزمجو</footer>
 
 </body>
 </html>
