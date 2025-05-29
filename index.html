@@ -24,18 +24,29 @@
     .header h1 { color: #1e3a8a; margin: 0 0 8px; font-size: 24px; }
     .header p { color: #374151; font-size: 15px; margin-bottom: 16px;}
     .contact-links { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;}
-    .contact-item { display: flex; align-items: center; justify-content: flex-end; gap: 8px;}
-    .contact-item i { font-size: 17px; color: #1e293b;}
     .contact-item a {
-      flex: 1;
-      text-decoration: none; background: #f1f5f9;
-      color: #1e293b; padding: 10px 0;
-      border: 1px solid #cbd5e1; border-radius: 8px;
-      font-weight: 500; transition: .2s;
-      font-size: 15px; display: block;
-      text-align: center;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: flex-end;
+      background: #f1f5f9;
+      color: #1e293b;
+      padding: 10px 0;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 15px;
+      text-decoration: none;
+      transition: .2s;
+      text-align: right;
+      gap: 10px;
     }
-    .contact-item a:hover { background: #dbeafe; color: #1d4ed8; border-color: #93c5fd;}
+    .contact-item a:hover {
+      background: #dbeafe; color: #1d4ed8; border-color: #93c5fd;
+    }
+    .contact-item i {
+      font-size: 17px; color: #1e293b;
+    }
     .call-to-action {
       color: #1e3a8a; font-weight: bold;
       font-size: 16px; margin: 20px 0 0;
@@ -62,28 +73,22 @@
 
   <div class="contact-links">
     <div class="contact-item">
-      <i class="fas fa-phone"></i>
-      <a href="tel:09123016067">09123016067</a>
+      <a href="tel:09123016067"><span>09123016067</span><i class="fas fa-phone"></i></a>
     </div>
     <div class="contact-item">
-      <i class="fab fa-telegram"></i>
-      <a href="https://t.me/rahilrazmjoo" target="_blank">تلگرام</a>
+      <a href="https://t.me/rahilrazmjoo" target="_blank"><span>تلگرام</span><i class="fab fa-telegram"></i></a>
     </div>
     <div class="contact-item">
-      <i class="fab fa-whatsapp"></i>
-      <a href="https://wa.me/989123016067" target="_blank">واتس اپ</a>
+      <a href="https://wa.me/989123016067" target="_blank"><span>واتس اپ</span><i class="fab fa-whatsapp"></i></a>
     </div>
     <div class="contact-item">
-      <i class="fab fa-linkedin"></i>
-      <a href="https://www.linkedin.com/in/rahil-razmjoo-8aa615b3/" target="_blank">لینکدین</a>
+      <a href="https://www.linkedin.com/in/rahil-razmjoo-8aa615b3/" target="_blank"><span>لینکدین</span><i class="fab fa-linkedin"></i></a>
     </div>
     <div class="contact-item">
-      <i class="fas fa-envelope"></i>
-      <a href="mailto:r.rahil@gmail.com">ایمیل</a>
+      <a href="mailto:r.rahil@gmail.com"><span>ایمیل</span><i class="fas fa-envelope"></i></a>
     </div>
     <div class="contact-item">
-      <i class="fas fa-map-marker-alt"></i>
-      <a href="geo:35.483172,51.078791?q=دفتر%20رزمجو" target="_blank">موقعیت مکانی دفتر</a>
+      <a href="geo:35.483172,51.078791?q=دفتر%20رزمجو" target="_blank"><span>موقعیت مکانی دفتر</span><i class="fas fa-map-marker-alt"></i></a>
     </div>
   </div>
 
