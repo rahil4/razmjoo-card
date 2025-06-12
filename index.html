@@ -11,101 +11,102 @@
     body {
       font-family: "Vazir", Tahoma, sans-serif;
       margin: 0; padding: 0;
-      background: #fff; color: #1e293b;
+      background: #f3f4f6; color: #1e293b;
       min-height: 100vh;
       display: flex; flex-direction: column; align-items: center;
-      padding: 24px;
       box-sizing: border-box;
       overflow-x: hidden;
     }
-    .header, .contact-links, footer {
+    .main-card {
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(30, 58, 138, 0.08), 0 1.5px 6px rgba(30, 58, 138, 0.04);
+      border-radius: 20px;
+      padding: 24px 18px 18px 18px;
+      margin: 28px 0 0 0;
       width: 100%;
-      max-width: 400px;
-      margin: 0 auto;
-      text-align: center;
-      box-sizing: border-box;
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .header img { width: 180px; max-width: 100%; margin: 16px 0 8px; }
-    .header h1 { color: #1e3a8a; margin: 0 0 8px; font-size: 24px; }
-    .header p { color: #374151; font-size: 15px; margin-bottom: 16px;}
-    .contact-links { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;}
+    .header img { width: 100px; border-radius: 18px; margin-bottom: 10px; }
+    .header h1 { color: #2563eb; margin: 0 0 6px; font-size: 20px; }
+    .header p { color: #475569; font-size: 13px; margin-bottom: 12px;}
+    .contact-links { width: 100%; display: flex; flex-direction: column; gap: 8px; margin-bottom: 10px;}
     .contact-item a {
       display: flex;
       flex-direction: row-reverse;
       align-items: center;
-      justify-content: center;
       background: #f1f5f9;
       color: #1e293b;
-      padding: 10px 0;
-      border: 1px solid #cbd5e1;
-      border-radius: 8px;
+      padding: 7px 0;
+      border-radius: 10px;
       font-weight: 500;
-      font-size: 18px;    /* این خط تغییر کرد */
+      font-size: 15px;
       text-decoration: none;
-      transition: .2s;
+      box-shadow: 0 1.5px 4px rgba(30, 58, 138, 0.06);
       text-align: center;
-      gap: 10px;
-      width: 60vw;
-      max-width: 300px;
-      min-width: 160px;
-      margin: 0 auto;
-      box-sizing: border-box;
+      gap: 8px;
+      width: 100%;
+      transition: .18s;
+      border: none;
     }
     .contact-item a:hover {
-      background: #dbeafe; color: #1d4ed8; border-color: #93c5fd;
+      background: #e0e7ff; color: #2563eb;
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.14);
     }
     .contact-item i {
-      font-size: 20px; color: #1e293b;
+      font-size: 17px; color: #1e293b;
     }
     .call-to-action {
-      color: #1e3a8a; font-weight: bold;
-      font-size: 16px; margin: 20px 0 0;
+      color: #2563eb;
+      font-weight: 600;
+      font-size: 15px;
+      margin: 14px 0 0;
       text-align: center;
     }
     footer {
-      font-size: 12px; color: #9ca3af; padding: 12px 0 0;
-      text-align: center;
+      font-size: 11px; color: #94a3b8; padding: 10px 0 0; text-align: center;
     }
-    @media (max-width: 600px) {
-      body, .header, .contact-links, footer { padding: 4vw !important; }
-      .header img { width: 130px; }
-      .header h1 { font-size: 20px;}
-      /* خط زیر را حذف یا مقدار font-size را برابر 18px قرار بده تا در موبایل هم بزرگ باشد */
-      .contact-item a { font-size: 18px; }
+    @media (max-width: 480px) {
+      .main-card { padding: 14px 3vw 12px 3vw; margin-top: 12px; max-width: 95vw;}
+      .header img { width: 70px; }
+      .header h1 { font-size: 17px;}
+      .contact-item a { font-size: 14px; padding: 6px 0;}
     }
   </style>
 </head>
 <body>
+  <div class="main-card">
+    <div class="header">
+      <img src="logo.png" alt="لوگوی رزم‌جو" />
+      <h1>راهیل رزم‌جو</h1>
+      <p>متخصص و مشاور در امور ثبتی و نقشه‌برداری </p>
+    </div>
 
-  <div class="header">
-    <img src="logo.png" alt="لوگوی رزم‌جو" />
-    <h1>راهیل رزم‌جو</h1>
-    <p>متخصص و مشاور در امور ثبتی و نقشه‌برداری </p>
+    <div class="contact-links">
+      <div class="contact-item">
+        <a href="tel:09123016067"><span>09123016067</span><i class="fas fa-phone"></i></a>
+      </div>
+      <div class="contact-item">
+        <a href="https://t.me/rahilrazmjoo" target="_blank"><span>تلگرام</span><i class="fab fa-telegram"></i></a>
+      </div>
+      <div class="contact-item">
+        <a href="https://wa.me/989123016067" target="_blank"><span>واتس اپ</span><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <div class="contact-item">
+        <a href="https://www.linkedin.com/in/rahil-razmjoo-8aa615b3/" target="_blank"><span>لینکدین</span><i class="fab fa-linkedin"></i></a>
+      </div>
+      <div class="contact-item">
+        <a href="mailto:r.rahil@gmail.com"><span>ایمیل</span><i class="fas fa-envelope"></i></a>
+      </div>
+      <div class="contact-item">
+        <a href="geo:35.4832696, 51.0789676"><span>موقعیت مکانی دفتر</span><i class="fas fa-map-marker-alt"></i></a>
+      </div>
+    </div>
+
+    <p class="call-to-action">برای مشاوره و هماهنگی با من تماس بگیرید!</p>
   </div>
-
-  <div class="contact-links">
-    <div class="contact-item">
-      <a href="tel:09123016067"><span>09123016067</span><i class="fas fa-phone"></i></a>
-    </div>
-    <div class="contact-item">
-      <a href="https://t.me/rahilrazmjoo" target="_blank"><span>تلگرام</span><i class="fab fa-telegram"></i></a>
-    </div>
-    <div class="contact-item">
-      <a href="https://wa.me/989123016067" target="_blank"><span>واتس اپ</span><i class="fab fa-whatsapp"></i></a>
-    </div>
-    <div class="contact-item">
-      <a href="https://www.linkedin.com/in/rahil-razmjoo-8aa615b3/" target="_blank"><span>لینکدین</span><i class="fab fa-linkedin"></i></a>
-    </div>
-    <div class="contact-item">
-      <a href="mailto:r.rahil@gmail.com"><span>ایمیل</span><i class="fas fa-envelope"></i></a>
-    </div>
-    <div class="contact-item">
-      <a href="geo:35.4832696, 51.0789676"><span>موقعیت مکانی دفتر</span><i class="fas fa-map-marker-alt"></i></a>
-    </div>
-  </div>
-
-  <p class="call-to-action">برای مشاوره و هماهنگی با من تماس بگیرید!</p>
-
   <footer>© خدمات نقشه‌برداری و ثبتی رزمجو</footer>
 </body>
 </html>
